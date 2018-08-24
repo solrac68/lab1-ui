@@ -6,4 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".FoodActivity">
 
+    <CheckBox
+        android:id="@+id/checkBoxMorning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mañana"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="174dp" />
+
+    <CheckBox
+        android:id="@+id/checkBoxAfternoon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tarde"
+        tools:layout_editor_absoluteX="98dp"
+        tools:layout_editor_absoluteY="174dp" />
+
+    <CheckBox
+        android:id="@+id/checkBoxNight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Noche"
+        tools:layout_editor_absoluteX="167dp"
+        tools:layout_editor_absoluteY="174dp" />
 </android.support.constraint.ConstraintLayout>
