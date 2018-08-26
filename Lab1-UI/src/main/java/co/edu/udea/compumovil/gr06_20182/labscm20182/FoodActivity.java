@@ -6,7 +6,11 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -18,6 +22,16 @@ public class FoodActivity extends AppCompatActivity implements TimePickerDialog.
     ImageView imageView;
     Uri imageUri;
     private TextView mTimeDisplay;
+    private CheckBox checkBoxMorning;
+    private CheckBox checkBoxAfternoon;
+    private CheckBox checkBoxNight;
+    private EditText txtPrecio;
+    private EditText txtIngredient;
+    private TextView txtView;
+    private TextView textViewTime;
+    private EditText txtName;
+
+
     private int mHour;
     private int mMinute;
 
@@ -28,7 +42,15 @@ public class FoodActivity extends AppCompatActivity implements TimePickerDialog.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food);
         imageView = (ImageView) findViewById(R.id.imgView);
+
         mTimeDisplay = (TextView) findViewById(R.id.textViewTime);
+        checkBoxMorning = (CheckBox)findViewById(R.id.checkBoxMorning);
+        checkBoxAfternoon = (CheckBox)findViewById(R.id.checkBoxAfternoon);
+        checkBoxNight = (CheckBox)findViewById(R.id.checkBoxNight);
+        txtPrecio =  (EditText)findViewById(R.id.txtPrecio);
+        txtIngredient = (EditText)findViewById(R.id.txtIngredient);
+        txtView = (TextView) findViewById(R.id.txtView);
+        txtName = (EditText)findViewById(R.id.txtName);
 
         final Calendar c = Calendar.getInstance();
         mHour = c.get(Calendar.HOUR_OF_DAY);
@@ -69,5 +91,47 @@ public class FoodActivity extends AppCompatActivity implements TimePickerDialog.
         mHour = hourOfDay;
         mMinute = minute;
         updateDisplay();
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        switch (id) {
+            case R.id.id_clean:
+                cleanControls();
+                return true;
+            case R.id.id_exit:
+                exitApplication();
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    private void cleanControls() {
+        mTimeDisplay.setText("");
+        txtName.setText("");
+        checkBoxMorning.setChecked(false);
+        checkBoxAfternoon.setChecked(false);
+        checkBoxNight.setChecked(false);
+        txtPrecio.setText("");
+        txtIngredient.setText("");
+        txtView.setText("");
+        imageView.setImageURI(Uri.EMPTY);
+    }
+
+    private void exitApplication() {
+        onDestroy();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.main,menu);
+        return true;
+    }
+
+    public void onDestroy() {
+        super.onDestroy();
+        UIHelper.killApp(true);
     }
 }
