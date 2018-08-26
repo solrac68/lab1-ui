@@ -4,8 +4,12 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.net.URL;
 
@@ -13,6 +17,10 @@ public class DrinkActivity extends AppCompatActivity {
 
     ImageView imageView;
     Uri imageUri;
+    private EditText txtName;
+    private EditText txtPrecio;
+    private EditText txtIngredient;
+    private TextView txtView;
 
     private static int RESULT_LOAD_IMG = 1;
     @Override
@@ -20,6 +28,10 @@ public class DrinkActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drink);
         imageView = (ImageView) findViewById(R.id.imgView);
+        txtView = (TextView) findViewById(R.id.txtView);
+        txtName = (EditText)findViewById(R.id.txtName);
+        txtPrecio = (EditText)findViewById(R.id.txtPrecio);
+        txtIngredient = (EditText)findViewById(R.id.txtIngredient);
     }
 
     public void loadImagefromGallery(View view) {
@@ -36,5 +48,40 @@ public class DrinkActivity extends AppCompatActivity {
             imageView.setImageURI(imageUri);
 
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.main,menu);
+        return true;
+    }
+
+    public void onDestroy() {
+        super.onDestroy();
+        UIHelper.killApp(true);
+    }
+    private void exitApplication() {
+        onDestroy();
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        switch (id) {
+            case R.id.id_clean:
+                cleanControls();
+                return true;
+            case R.id.id_exit:
+                exitApplication();
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    private void cleanControls() {
+        txtName.setText("");
+        txtPrecio.setText("");
+        txtIngredient.setText("");
+        txtView.setText("");
+        imageView.setImageURI(Uri.EMPTY);
     }
 }
