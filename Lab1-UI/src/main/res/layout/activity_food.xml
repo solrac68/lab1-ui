@@ -121,7 +121,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:layout_weight="1"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
@@ -140,8 +140,7 @@
             android:layout_weight="2"
             android:text="Texto"
             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-            android:textSize="10sp"
-            app:fontFamily="sans-serif-smallcaps" />
+            android:textSize="10sp" />
     </LinearLayout>
 
     <RadioGroup
@@ -189,7 +188,6 @@
         android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="TextView"
         app:layout_constraintBottom_toTopOf="@+id/txtPrecio"
         app:layout_constraintStart_toEndOf="@+id/imageButtonPicker"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
