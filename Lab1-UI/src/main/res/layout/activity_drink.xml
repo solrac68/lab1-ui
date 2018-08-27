@@ -71,7 +71,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:text="Texto" />
+            android:text="Texto"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textSize="10sp" />
     </LinearLayout>
 
     <Button

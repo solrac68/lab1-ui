@@ -138,7 +138,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:text="Texto" />
+            android:text="Texto"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textSize="10sp"
+            app:fontFamily="sans-serif-smallcaps" />
     </LinearLayout>
 
     <RadioGroup
@@ -170,11 +173,13 @@
         android:id="@+id/imageButtonPicker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:onClick="onClickPicker"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup"
-        app:srcCompat="@android:drawable/ic_lock_idle_alarm"
-        tools:layout_editor_absoluteX="8dp" />
+        app:srcCompat="@android:drawable/ic_lock_idle_alarm" />
 
     <TextView
         android:id="@+id/textViewTime"

@@ -18,4 +18,5 @@
     <string name="str_timeprepa">Preparación</string>
     <string name="str_clean">Limpiar</string>
     <string name="str_exit">Salir</string>
+    <string name="str_hour">Hora preparación</string>
 </resources>
