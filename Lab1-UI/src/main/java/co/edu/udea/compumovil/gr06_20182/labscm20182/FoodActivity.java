@@ -110,7 +110,7 @@ public class FoodActivity extends AppCompatActivity implements TimePickerDialog.
             mTimeDisplay.setText(sharedpreferences.getString(TimeDisplay, hour));
         }
 
-        //updateDisplay();
+        updateDisplay();
         loadView();
     }
 
