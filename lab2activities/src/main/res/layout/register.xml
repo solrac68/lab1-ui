@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
   xmlns:android="http://schemas.android.com/apk/res/android"
-  android:layout_width="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
   android:layout_height="fill_parent"
   android:fillViewport="true">
   <RelativeLayout 
@@ -41,49 +42,62 @@
 		  android:padding="10dip"
 		  android:layout_below="@id/header">
 		  <!-- Full Name Label -->
-		  <TextView android:layout_width="fill_parent"
-		  		android:layout_height="wrap_content"
-		  		android:textColor="#372c24"
-		  		android:text="@string/str_name"/>
-		  <EditText android:id="@+id/reg_fullname" 
-		  		android:layout_width="fill_parent"
-		  		android:layout_height="wrap_content"
-		  		android:layout_marginTop="5dip"
-		  		android:singleLine="true"
-		  		android:layout_marginBottom="20dip"/>
+
+            <EditText
+                android:id="@+id/reg_fullname"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dip"
+                android:layout_marginTop="5dip"
+                android:hint="@string/str_name"
+                android:singleLine="true" />
 		  <!--  Email Label -->
-		  <TextView android:layout_width="fill_parent"
-		  		android:layout_height="wrap_content"
-		  		android:textColor="#372c24"
-		  		android:text="@string/str_cap_email"/>
-		  <EditText android:id="@+id/reg_email" 
-		  		android:layout_width="fill_parent"
-		  		android:layout_height="wrap_content"
-			    android:inputType="textEmailAddress"
-		  		android:layout_marginTop="5dip"
-		  		android:singleLine="true"
-		  		android:layout_marginBottom="20dip"/>
+
+            <EditText
+                android:id="@+id/reg_email"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dip"
+                android:layout_marginTop="5dip"
+                android:hint="@string/str_cap_email"
+                android:inputType="textEmailAddress"
+                android:singleLine="true" />
 		  <!-- Password Label -->
-		  <TextView android:layout_width="fill_parent"
-		  		android:layout_height="wrap_content"
-		  		android:textColor="#372c24"
-		  		android:text="@string/str_cap_password"/>
-		  <EditText android:id="@+id/reg_password" 
-		        android:layout_width="fill_parent"
-		  		android:layout_height="wrap_content"
-		  		android:inputType="textPassword"
-		  		android:singleLine="true"
-		  		android:layout_marginTop="5dip"/>
-			<Button android:id="@+id/btnImage"
-				android:layout_width="fill_parent"
-				android:layout_height="wrap_content"
-				android:layout_marginTop="10dip"
-				android:text="@string/str_cap_imagen"/>
+
+            <EditText
+                android:id="@+id/reg_password"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:hint="@string/str_cap_password"
+                android:inputType="textPassword"
+                android:singleLine="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="117dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnImage"
+                    android:layout_width="117dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_cap_imagen" />
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+
 		  <!-- Register Button -->		
 		  <Button android:id="@+id/btnRegister" 
 		  		android:layout_width="fill_parent"
 		  		android:layout_height="wrap_content"
-		  		android:layout_marginTop="10dip"
+		  		android:layout_marginTop="5dip"
 		  		android:text="@string/str_newRegister"/>
 		  <!-- Link to Login Screen -->
 		  <TextView android:id="@+id/link_to_login" 
@@ -95,8 +109,8 @@
 		  		android:gravity="center"
 		  		android:textSize="20dip"
 		  		android:textColor="#025f7c"/>
-		    
-		</LinearLayout>
+
+        </LinearLayout>
   		<!-- Registration Form Ends -->
   		
   		
