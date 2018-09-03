@@ -44,7 +44,7 @@
 		  <!-- Full Name Label -->
 
             <EditText
-                android:id="@+id/reg_fullname"
+                android:id="@+id/edtName"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dip"
@@ -54,7 +54,7 @@
 		  <!--  Email Label -->
 
             <EditText
-                android:id="@+id/reg_email"
+                android:id="@+id/edtEmail"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dip"
@@ -65,7 +65,7 @@
 		  <!-- Password Label -->
 
             <EditText
-                android:id="@+id/reg_password"
+                android:id="@+id/edtPassword"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dip"
@@ -86,7 +86,7 @@
                     android:text="@string/str_cap_imagen" />
 
                 <ImageView
-                    android:id="@+id/imageView3"
+                    android:id="@+id/imageView"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1" />
@@ -94,7 +94,7 @@
 
 
 		  <!-- Register Button -->		
-		  <Button android:id="@+id/btnRegister" 
+		  <Button android:id="@+id/btnRegistry"
 		  		android:layout_width="fill_parent"
 		  		android:layout_height="wrap_content"
 		  		android:layout_marginTop="5dip"

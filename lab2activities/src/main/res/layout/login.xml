@@ -23,7 +23,7 @@
   							android:layout_marginLeft="10dip"/>
   				<!-- Logo Ends -->
   		</LinearLayout>
-  		<!--  Header Ends -->  
+  		<!--  Header Ends -->
   		<!-- Footer Start -->
   		<!--<LinearLayout android:id="@+id/footer"-->
   				<!--android:layout_width="fill_parent"-->
@@ -33,7 +33,7 @@
 				<!--android:orientation="vertical">-->
   		<!--</LinearLayout>-->
   		<!-- Footer Ends -->
-  		
+
   		<!-- Login Form -->
 		<LinearLayout
 		  xmlns:android="http://schemas.android.com/apk/res/android"
@@ -43,30 +43,25 @@
 		  android:padding="10dip"
 		  android:layout_below="@id/header">
 		  <!--  Email Label -->
-		  <TextView
-			  	android:layout_width="fill_parent"
-		  		android:layout_height="wrap_content"
-		  		android:textColor="#372c24"
-		  		android:text="@string/str_correo"/>
-		  <EditText
-			  	android:id="@+id/email"
-			  	android:layout_width="fill_parent"
-		  		android:layout_height="wrap_content"
-		  		android:layout_marginTop="5dip"
-		  		android:layout_marginBottom="20dip"
-		  		android:singleLine="true"/>
+
+			<EditText
+				android:id="@+id/email"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="20dip"
+				android:layout_marginTop="5dip"
+				android:hint="@string/str_correo"
+				android:singleLine="true" />
 		  <!--  Password Label -->
-		  <TextView android:layout_width="fill_parent"
-		  		android:layout_height="wrap_content"
-		  		android:textColor="#372c24"
-		  		android:text="@string/str_password"/>
-		  <EditText
-			  	android:id="@+id/password"
-			    android:layout_width="fill_parent"
-		  		android:layout_height="wrap_content"
-		  		android:layout_marginTop="5dip"
-		  		android:singleLine="true"
-			    android:inputType="textPassword"/>
+
+			<EditText
+				android:id="@+id/password"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="5dip"
+				android:hint="@string/str_password"
+				android:inputType="textPassword"
+				android:singleLine="true" />
 		  <!-- Login button -->	
 		  <Button android:id="@+id/btnLogin" 
 		  		android:layout_width="fill_parent"
@@ -84,7 +79,6 @@
 				android:text="@string/str_registro"
 				android:textColor="#0b84aa"
 				android:textSize="20dip" />
-		    
 		</LinearLayout>
   		<!-- Login Form Ends -->
   </RelativeLayout>
